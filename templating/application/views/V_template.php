@@ -320,23 +320,10 @@
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
 			<?php
-                $main_menu = $this->db->get_where('menu', array('bagian' => 0));
-                foreach ($main_menu->result() as $main) {
-                    $sub_menu = $this->db->get_where('menu', array('bagian' => $main->id));
-                    if ($sub_menu->num_rows() > 0) {
-                        echo "<li class='treeview'>" . anchor(site_url(''.$main->link.''), '<i class="' . $main->icon . '"></i>' . $main->nama .
-						'<span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>');
-                        echo "<ul class='treeview-menu'>";
-                        foreach ($sub_menu->result() as $sub) {
-                            echo "<li>" . anchor(site_url(''.$main->link.''), '<i class="' . $sub->icon . '"></i>' . $sub->nama) . "</li>";
-                        }
-                            echo"</ul></li>";
-                        }
-						else {
-                            echo "<li>" . anchor(site_url(''.$main->link.''), '<i class="' . $main->icon . '"></i>' . $main->nama) . "</li>";
-                        }
-                }
+                echo $navigasi;
 			?>
+		</li>
+		</ul>
     <!-- /.sidebar -->
   </aside>
 

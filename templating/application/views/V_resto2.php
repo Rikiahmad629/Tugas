@@ -1,7 +1,7 @@
-<div class="col-md-2"><button type="button" class="btn btn-block btn-danger" href="<?php echo site_url('C_resto/delete_resto/'.$resto->id)?>">Hapus Data</button></div>
+<div class="col-md-2"><a href="#" id="hapus"><button type="button" class="btn btn-block btn-danger" >Hapus Data</button></a></div>
+
 <div class="box-body">
 	<h1>Data Restoran <?php echo $resto->nama_resto; ?></h1></br>
-	
     <form role="form" method="post" action="<?php echo site_url('C_resto/update_resto/'.$resto->id)?>">
     <div class="form-group">
 	<label>ID Restoran</label>
@@ -47,11 +47,11 @@
 	</div>
 	<div class="form-group">
 	<label>Tanggal Visit</label>
-	<input type="text" class="form-control" name="tanggal_visit" value="<?php echo $resto->tanggal_visit; ?>" disabled><!--can digawean make form helper da copas template adminlte jadi si CI masih lieureun ieu teh string atawa date-->
+	<input type="text" class="form-control" name="tanggal_visit" value="<?php echo $resto->tanggal_visit; ?>" readonly>
 	</div>
 	<div class="form-group">
 	<label>Marketing</label>
-	<input type="text" class="form-control" name="marketing" value="<?php echo $resto->nama_marketing; ?>" disabled><!--can digawean-->
+	<input type="text" class="form-control" name="marketing" value="<?php echo $resto->nama_marketing; ?>" readonly>
 	</div>
 	<div class="form-group">
 	<label>Potensi</label>
