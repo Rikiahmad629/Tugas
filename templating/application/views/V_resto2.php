@@ -1,4 +1,4 @@
-<div class="col-md-2"><a href="#" id="hapus"><button type="button" class="btn btn-block btn-danger" >Hapus Data</button></a></div>
+<div class="col-md-2"><a href="<?php echo site_url('C_resto/delete_resto/'.$resto->id)?>" id="hapus"><button type="button" class="btn btn-block btn-danger" >Hapus Data</button></a></div>
 
 <div class="box-body">
 	<h1>Data Restoran <?php echo $resto->nama_resto; ?></h1></br>
@@ -50,11 +50,21 @@
 	<input type="text" class="form-control" name="tanggal_visit" value="<?php echo $resto->tanggal_visit; ?>" readonly>
 	</div>
 	<div class="form-group">
-	<label>Marketing</label>
-	<input type="text" class="form-control" name="marketing" value="<?php echo $resto->nama_marketing; ?>" readonly>
+	<label>Marketing</label></br>
+	<?php 
+		$koneksi=mysqli_connect("localhost","root","","template");
+		$query=mysqli_query($koneksi,"select id ,nama_marketing from marketing");
+		
+	?>
+	<select name="marketing">
+		<?php
+		while($isi=mysqli_fetch_array($query)){
+		echo"<option value='".$isi['id']."'>".$isi['nama_marketing']."</option>";}
+		?>
+	</select>
 	</div>
 	<div class="form-group">
-	<label>Potensi</label>
+	<label>Potensi</label></br>
 	<select name="potensi">
 	<option value="1">Sangat Potensial</option>
 	<option value="2">Potensial</option>

@@ -1,4 +1,3 @@
-<!--<div class="col-md-2"><button type="button" class="btn btn-block btn-danger" href="<?php echo site_url('C_resto/delete_resto/'.$resto->id)?>">Hapus Data</button></div>-->
 <div class="box-body">
 	<h1>Data User</h1></br>
 	
@@ -8,12 +7,12 @@
 	<input type="text" class="form-control" name="id" placeholder="Masukan ID">
 	</div>
 	<div class="form-group">
-	<label>Nama Awal</label>
-	<input type="text" class="form-control" name="nama_awal" placeholder=" Masukan Nama Awal User">
+	<label>Nama User</label>
+	<input type="text" class="form-control" name="nama" placeholder=" Masukan Nama User">
 	</div>
 	<div class="form-group">
-	<label>Nama Akhir</label>
-	<input type="text" class="form-control" name="nama_akhir" placeholder=" Masukan Nama Akhir User">
+	<label>Alamat</label>
+	<input type="text" class="form-control" name="alamat" placeholder=" Masukan alamat">
 	</div>
 	<input type="text" class="form-control" name="ip" value="127.0.1" style="display:none;">
 	<div class="form-group">
@@ -44,7 +43,7 @@
 	
 	<div class="form-group">
 	<label>Jenis User</label>
-	<SELECT class="form-control">
+	<SELECT class="form-control" name="hak">
 		<option value="3">Marketing</option>
 		<option value="4">Supervisor Marketing</option>
 		<option value="5">Technical Support</option>
