@@ -27,5 +27,11 @@ class M_user extends CI_Model{
 		$this->db->where('id',$id);
 		$this->db->delete('resto',$data);
 	}
+	function cek_hak_akses($id){
+		$this->db->select('group.id,users.username,users.password');
+		$this->db->from('users_group');
+		$this->db->where('users',$id)
+		$this->db->join('group','group')
+	}
 }
 ?>

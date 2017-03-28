@@ -1,0 +1,2 @@
+<button type="button" class="btn btn-block btn-success btn-lg"><a href="<?php echo site_url("C_supervisor_marketing/view_marketing");?>">Melihat Data Marketing</a></button>
+<button type="button" class="btn btn-block btn-success btn-lg"><a href="<?php echo site_url("C_report_marketing/view_report_marketing");?>">Melihat Report dan Memasukan Komentar</button>

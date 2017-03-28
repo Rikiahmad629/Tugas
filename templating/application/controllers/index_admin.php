@@ -1,2 +1,0 @@
-<button type="button" class="btn btn-block btn-success btn-lg">Mengelola User</button>
-<button type="button" class="btn btn-block btn-success btn-lg"><a href="<?php echo site_url("C_resto/view_resto");?>">Mengelola Resto</button>
